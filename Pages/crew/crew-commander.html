@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="../Destination/Styles/navStyle.css">
+  <link rel="stylesheet" href="../crew/Styles/crew.css">
+  <script src="../../js/crew.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img class="logo" src="../../assets/shared/logo.svg" alt="Logo">
+            <nav>
+              <img id="navToggle" onclick="showNav()" src="../../assets/shared/icon-hamburger.svg" alt="Menu Toggle">
+              <ul id="navLinks">
+                <img onclick="hideNav()" src="../../assets/shared/icon-close.svg" alt="Close Menu">
+              </ul>
+            </nav>
+        </header>
+
+        <div class="inner-container">
+          <p id="head"><strong>02</strong> MEET YOUR CREW</p>
+
+          <main>
+            <div class="text-container">
+              <h4 id="crewRole"></h4>
+              <h2 id="crewName"></h2>
+              <p id="crewBio"></p>
+              <nav id="crewLinks">
+                <ul>
+                  <li><a href="#" onclick="displayCrew('Commander', this)">Commander</a></li>
+                  <li><a href="#" onclick="displayCrew('Mission Specialist', this)">Mission Specialist</a></li>
+                  <li><a href="#" onclick="displayCrew('Pilot', this)">Pilot</a></li> 
+                  <li><a href="#" onclick="displayCrew('Flight Engineer', this)">Flight Engineer</a></li>
+                </ul>
+            </nav>
+            </div>
+
+            <img id="crewImage" src="" alt="">
+          </main>
+        </div>
+
+    
+    </div>
+
+    <script src="../../js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="./Styles/navStyle.css">
+  <link rel="stylesheet" href="./Styles/Destination.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img class="logo" src="../../assets/shared/logo.svg" alt="Logo">
+            <nav>
+              <img id="navToggle" onclick="showNav()" src="../../assets/shared/icon-hamburger.svg" alt="Menu Toggle">
+              <ul id="navLinks">
+                <img onclick="hideNav()" src="../../assets/shared/icon-close.svg" alt="Close Menu">
+              </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="top-text">
+              <h4 class="num">01</h4>
+              <h4 class="text">PICK YOUR DESTINATION</h4>
+            </div>
+
+            <div class="moon-container">
+              <img id="destinationImage" src="" alt="Destination Image">
+
+              <div class="text-container">
+                <nav id="moonLinks">
+                    <ul>
+                      <li><a href="./destination-moon.html" onclick="displayDestination('Moon')">Moon</a></li>
+                      <li><a href="./destination-mars.html" onclick="displayDestination('Mars')">Mars</a></li>
+                      <li><a href="./destination-europa.html" onclick="displayDestination('Europa')">Europa</a></li> 
+                      <li><a href="./destination-titan.html" onclick="displayDestination('Titan')">Titan</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="main-text">
+                <h2 id="destinationName"></h2>
+                <p id="destinationDescription"></p>
+
+                
+                <div class="additional-info">
+                  <p><strong>Avg. Distance: </strong><span id="distance"></span></p>
+                  <p><strong>Est. Travel Time: </strong><span id="travel"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+    </div>
+
+    <script src="../../js/home.js"></script>
+    <script src="../../js/Destination.js"/>
+</body>
+</html>

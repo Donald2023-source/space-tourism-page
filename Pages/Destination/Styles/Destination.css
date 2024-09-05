@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+:root {
+    --faintText: #D0D6F9;
+    --myFontFamily: "Crimson Text", serif;;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--myFontFamily);
+    font-weight: 100
+}
+
+
+.container {
+    background-image: url('../../../assets/destination/background-destination-desktop.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+   
+}
+
+.moon-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 5rem;
+    align-items: center;
+    height: 70vh;
+}
+
+.text-container {
+    width: 40%;
+}
+
+.top-text {
+    color: var(--faintText);
+    display: flex;
+    gap: 1rem;
+    margin: 0 8rem;
+
+    .num {
+        color: #d0d6f942;
+    }
+
+   
+}
+#moonLinks {
+    ul {
+        display: flex;
+        gap: 3rem;
+    }
+
+    li {
+        list-style: none;
+
+        &:hover {
+            border-bottom: 3px solid white;
+            padding: 0 0 10px 0;
+            transition: ease-in-out 300ms;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: 200;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.main-text {
+    color: var(--faintText);
+    width: 100%;
+
+    h2 {
+        font-weight: 100; 
+        font-size: 5.5rem;
+        color: white;
+    }
+
+    #destinationDescription {
+        font-weight: 200;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.354);
+    }
+
+    .additional-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        padding: 1rem 0;
+
+        p{
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+
+            strong {
+                font-weight: 200;
+                font-size: 1.15rem;
+            }
+
+            span {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 400px) {
+    #moonLinks {
+        ul {
+            display: flex;
+            gap: 1rem;
+            padding: 10px;
+        }
+    
+        li {
+            list-style: none;
+    
+            &:hover {
+                border-bottom: 3px solid white;
+                padding: 0 0 10px 0;
+                transition: ease-in-out 300ms;
+            }
+    
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: 200;
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .top-text{
+       
+        margin: 0;
+        display: none;
+    }
+
+    #destinationDescription {
+        padding: 0;
+        line-height: 1rem; 
+    }
+
+   
+}
+@media (max-width: 600px) {
+    .moon-container {
+
+        #moonLinks {
+            font-size: 1rem;
+        }
+
+        flex-direction: column;
+        align-items: center;
+
+        #destinationImage {
+            height: 10rem;
+            line-height: 1rem;
+        }
+        
+        .text-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .main-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+               #destinationDescription{
+                    font-size: 0.7rem;
+                    text-align: center;
+               }
+            }
+
+            .additional-info{
+                width: 90%;
+                padding: 1.5rem 0;
+
+                span{
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 786px) {
+
+    .top-text {
+       padding: 0.3rem;
+    }
+
+    .moon-container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+
+        #destinationImage {
+            height: 10rem;
+        }
+
+
+        .text-container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .main-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                padding: 1rem 0;
+
+                #destinationDescription {
+                    text-align: center;
+                    width: 70%;
+                    line-height: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+        .moon-container {
+            flex-direction: column;
+
+            .text-container{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .main-text{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 2rem 0;
+
+                    #destinationDescription {
+                        text-align: center;
+                        width: 80%;
+                        line-height: 2.9rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+}

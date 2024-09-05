@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+:root {
+    --faintText: #D0D6F9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Crimson Text", serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    background-image: url('../../../assets/crew/background-crew-desktop.jpg');
+    height: 100%;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#head {
+    font-size: 1.4rem;
+    color: var(--faintText);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 10rem;
+
+    strong {
+        color: #d0d6f94e;
+    }
+}
+
+main {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #crewImage {
+        height: 30rem;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 40%;
+
+        h4 {
+            color: #d0d6f94e;
+            font-size: 1.5rem
+        }
+
+        h2 {
+            font-weight: 100;
+            font-size: 2rem;
+        }   
+
+        p{
+            width: 90%;
+            line-height: 2.4rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+
+#crewLinks li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.01px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+#crewLinks li{
+    list-style: none;
+}
+
+#crewLinks ul {
+    display: flex;
+    align-items: center;
+    margin: 4rem  0 0 0;
+    gap: 50px;
+    padding: 10px;
+}
+
+#crewLinks ul li a.active{
+    background: white;
+
+}
+
+
+#crewLinks li a.active {
+    background-color: white;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+
+.text-container, #crewImage {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+.text-container.active, #crewImage.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+@media(max-width: 786px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin: 3rem 0;
+
+        #crewImage{
+            height: 15rem;
+            margin: 1rem 0 0 0;
+        }
+
+        .text-container{
+            width: 100%;
+            text-align: center;
+            gap: 1rem;
+
+            p{
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    }
+
+    #crewLinks ul {
+      
+        justify-content: center;
+     
+    }
+}
+
+@media(max-width: 600px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem 0;
+        
+        #crewImage {
+            height: 14rem;
+            margin: 2rem 0 0 0;
+           }
+
+        .text-container {
+            width: 100%;
+            text-align: center;
+            gap: 8px;
+
+            p{
+                width: 100%;
+                text-align: center;
+                padding: 0 1rem;
+                font-size: 1rem;
+            }
+
+            
+        }
+    }
+
+    #head {
+        margin-left: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    
+#crewLinks ul {
+    padding: 10px 0;
+    justify-content: center;
+ 
+}
+
+#crewLinks ul li a {
+    padding: 4px;
+}
+}

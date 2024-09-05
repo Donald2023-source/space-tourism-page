@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="../Destination/Styles/navStyle.css">
+  <script src="../../js/Tech.js"></script>
+  <link rel="stylesheet" href="./Styles/Technology.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img class="logo" src="../../assets/shared/logo.svg" alt="Logo">
+            <nav>
+              <img id="navToggle" onclick="showNav()" src="../../assets/shared/icon-hamburger.svg" alt="Menu Toggle">
+              <ul id="navLinks">
+                <img onclick="hideNav()" src="../../assets/shared/icon-close.svg" alt="Close Menu">
+              </ul>
+            </nav>
+        </header>
+
+        <div class="inner-container">
+
+         <main>
+          <div class="text-container">
+            <div class="numNav">
+              <nav id="techLinks">
+                <ul>
+                  <li><a onclick="displayTech('1')" href="./technology-vehicle.html">1</a></li>
+                  <li><a onclick="displayTech('2')" href="./technology-spaceport.html">2</a></li>
+                  <li><a onclick="displayTech('3')" href="./technology-capsule.html">3</a></li>
+                </ul>
+            </nav>
+            </div>
+            <span class="text">
+              <h2>THE TERMINOLOGY</h2>
+              <h4 id="techName"></h4>
+              <p id="techDescription"></p>
+            </span>
+           
+          </div>
+          <img id="techImage" src="" alt="">
+         </main>
+        </div>
+    </div>
+
+    <script src="../../js/home.js"></script>
+</body>
+</html>
